@@ -58,4 +58,17 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+     public static double subtract(double num1, double num2) { return num1 - num2; }
+     private static void performSubtraction(Scanner scan) {
+        try {
+            System.out.println("Enter First Number: ");
+            double num1 = scan.nextDouble();
+            System.out.println("Enter Second Number: ");
+            double num2 = scan.nextDouble();
+            System.out.println(subtract(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 }
