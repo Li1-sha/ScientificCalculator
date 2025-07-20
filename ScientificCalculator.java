@@ -45,4 +45,17 @@ public class ScientificCalculator {
         System.out.println("\n--- Scientific Calculator ---");
         System.out.println("1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square Root\n6.Power\n7.Sine\n8.Cosine\n9.Tangent\n10.Natural Logarithm\n11.Logarithm Base10\n12.Absolute Value\n13.Round\n14.Ceiling\n15.Floor\n16.Min of two numbers\n17.Max of two numbers\n0.Exit");
     }
+    public static double addition(double num1, double num2) { return num1 + num2; }
+    private static void performAddition(Scanner scan) {
+        try {
+            System.out.println("Enter First Number: ");
+            double num1 = scan.nextDouble();
+            System.out.println("Enter Second Number: ");
+            double num2 = scan.nextDouble();
+            System.out.println(addition(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 }
