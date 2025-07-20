@@ -101,6 +101,21 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double calculateSquareRoot(double num) { return Math.sqrt(num); }
+    private static void performSqrt(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num1 = scan.nextDouble();
+            if (num1 < 0) {
+                System.out.println("Error: Cannot calculate square root of a negative number.");
+            } else {
+                System.out.println(calculateSquareRoot(num1));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
