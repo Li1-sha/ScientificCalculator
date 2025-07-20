@@ -247,6 +247,32 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double findMin(double num1, double num2) { return Math.min(num1, num2); }
+    public static double findMax(double num1, double num2) { return Math.max(num1, num2); }
+    private static void performMinimum(Scanner scan) {
+        try {
+            System.out.println("Enter First Number: ");
+            double num1 = scan.nextDouble();
+            System.out.println("Enter Second Number: ");
+            double num2 = scan.nextDouble();
+            System.out.println(findMin(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
+    private static void performMaximum(Scanner scan) {
+        try {
+            System.out.println("Enter First Number: ");
+            double num1 = scan.nextDouble();
+            System.out.println("Enter Second Number: ");
+            double num2 = scan.nextDouble();
+            System.out.println(findMax(num1, num2));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 }
