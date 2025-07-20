@@ -200,6 +200,53 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double absoluteValue(double num) { return Math.abs(num); }
+    public static double roundNumber(double num) { return Math.round(num); }
+    public static double ceilingNumber(double num) { return Math.ceil(num); }
+    public static double floorNumber(double num) { return Math.floor(num); }
+    private static void performAbsolute(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            System.out.println(absoluteValue(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+
+    private static void performRound(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            System.out.println(roundNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+
+    private static void performCeiling(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            System.out.println(ceilingNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+
+    private static void performFloor(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            System.out.println(floorNumber(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
