@@ -1,9 +1,9 @@
-import java.util.Scanner;  // FIXED: Typo 'jave' changed to 'java'
+import java.util.Scanner;  
 import java.util.InputMismatchException;
 
 public class ScientificCalculator {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);  // FIXED: incorrect variable name and constructor
+        Scanner scan = new Scanner(System.in); 
         int choice = -1;
 
         do {
@@ -13,8 +13,8 @@ public class ScientificCalculator {
                 choice = scan.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid choice input.");
-                scan.next();  // clear invalid input
-                continue;     // retry menu
+                scan.next();
+                continue;    
             }
 
             switch (choice) {
@@ -80,7 +80,7 @@ public class ScientificCalculator {
             }
         } catch (InputMismatchException e) {
             System.out.println("Invalid Input.");
-            scan.next();  // clear input buffer
+            scan.next(); 
         }
     }
 
@@ -158,7 +158,7 @@ public class ScientificCalculator {
     private static void performMinimum(Scanner scan) { performTwoNumberOp(scan, "Minimum", ScientificCalculator::findMin); }
     private static void performMaximum(Scanner scan) { performTwoNumberOp(scan, "Maximum", ScientificCalculator::findMax); }
 
-    // Utility methods to simplify repetitive code
+   
     private static void performOneNumberOp(Scanner scan, String opName, java.util.function.DoubleUnaryOperator op) {
         try {
             System.out.println("Enter Number: ");
