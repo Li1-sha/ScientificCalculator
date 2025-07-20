@@ -129,6 +129,47 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double calculateSine(double degrees) { return Math.sin(Math.toRadians(degrees)); }
+    public static double calculateCosine(double degrees) { return Math.cos(Math.toRadians(degrees)); }
+    public static double calculateTangent(double degrees) { return Math.tan(Math.toRadians(degrees)); }
+    private static void performSine(Scanner scan) {
+        try {
+            System.out.println("Enter Degree: ");
+            double num = scan.nextDouble();
+            System.out.println(calculateSine(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+
+    private static void performCosine(Scanner scan) {
+        try {
+            System.out.println("Enter Degree: ");
+            double num = scan.nextDouble();
+            System.out.println(calculateCosine(num));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+
+    private static void performTangent(Scanner scan) {
+        try {
+            System.out.println("Enter Degree: ");
+            double num = scan.nextDouble();
+            double normalizedDegrees = num % 360;
+            if (normalizedDegrees < 0) normalizedDegrees += 360;
+            if (normalizedDegrees % 180 == 90) {
+                System.out.println("Error: Tangent is undefined at " + num + "°.");
+            } else {
+                System.out.println(calculateTangent(num));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
