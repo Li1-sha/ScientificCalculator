@@ -116,6 +116,19 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double calculatePower(double base, double exponent) { return Math.pow(base, exponent); }
+    private static void performPower(Scanner scan) {
+        try {
+            System.out.println("Enter Base: ");
+            double base = scan.nextDouble();
+            System.out.println("Enter Exponent: ");
+            double exponent = scan.nextDouble();
+            System.out.println(calculatePower(base, exponent));
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
