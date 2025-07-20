@@ -170,6 +170,36 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double calcNaturalLogarithm(double num) { return Math.log(num); }
+    public static double calcLogarithmBase10(double num) { return Math.log10(num); }
+    private static void performNaturalLog(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            if (num <= 0) {
+                System.out.println("Error: Undefined for zero or negative numbers.");
+            } else {
+                System.out.println(calcNaturalLogarithm(num));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
+    private static void performLog10(Scanner scan) {
+        try {
+            System.out.println("Enter Number: ");
+            double num = scan.nextDouble();
+            if (num <= 0) {
+                System.out.println("Error: Undefined for zero or negative numbers.");
+            } else {
+                System.out.println(calcLogarithmBase10(num));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
