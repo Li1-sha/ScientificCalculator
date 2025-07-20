@@ -84,6 +84,23 @@ public class ScientificCalculator {
             scan.next();
         }
     }
+    public static double divide(double num1, double num2) { return num1 / num2; }
+    private static void performDivision(Scanner scan) {
+        try {
+            System.out.println("Enter First Number: ");
+            double num1 = scan.nextDouble();
+            System.out.println("Enter Second Number: ");
+            double num2 = scan.nextDouble();
+            if (num2 == 0) {
+                System.out.println("Error: Division by zero is not allowed.");
+            } else {
+                System.out.println(divide(num1, num2));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.");
+            scan.next();
+        }
+    }
 
 
 }
